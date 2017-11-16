@@ -1,20 +1,6 @@
 const Generator = require('yeoman-generator')
 const chalk = require('chalk')
 
-module.exports = class extends Generator  {
-  constructor(args, opts) {
-    // Calling the super constructor is important so our generator is correctly set up
-    super(args, opts);
-  }
-
-  initializing(){
-
-  }
-}
-
-const Generator = require('yeoman-generator')
-const chalk = require('chalk')
-
 // Demo Generator
 module.exports = class extends Generator  {
   constructor(args, opts) {

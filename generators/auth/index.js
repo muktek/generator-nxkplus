@@ -7,10 +7,6 @@ module.exports = class extends Generator  {
     super(args, opts);
   }
 
-  hi(){
-    console.log('hiii')
-  }
-
   initializing(){
     this.log('nkrop - Generating Auth')
   }
@@ -28,6 +24,7 @@ module.exports = class extends Generator  {
     console.log('installing packages...')
     this.npmInstall([
       'passport',
+      'passport-local',
       'cookie-session',
       'cookie-parser',
       'objection',
@@ -39,6 +36,7 @@ module.exports = class extends Generator  {
     console.log('')
     console.log('     (1) Create migration for users (with email + password columns)')
     console.log('     (2) Configure cookieSession, cookieParser, passport middleware in `server.js`')
+    console.log
     console.log('')
 
   }
