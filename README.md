@@ -31,7 +31,7 @@ projects
 
 #### `:auth`
 
-Generates authentication scaffolding
+Generates scaffolding for passport authentication
 
   ```sh
   yo nxkplus:auth
@@ -39,6 +39,7 @@ Generates authentication scaffolding
 
 - Installs npm application dependencies:
   - passport
+  - passport-local
   - objective
   - objective-password
   - cookie-session
