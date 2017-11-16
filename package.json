@@ -1,6 +1,6 @@
 {
   "name": "generator-genmod",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "yeoman generator for node, knex, objective, react, passport project",
   "main": "index.js",
   "scripts": {
@@ -8,9 +8,9 @@
   },
   "author": "",
   "license": "MIT",
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/t3tools/generator-genmod"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/t3tools/generator-genmod"
   },
   "dependencies": {
     "chalk": "2.3.0",
