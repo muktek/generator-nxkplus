@@ -30,12 +30,12 @@ module.exports = class extends Generator  {
       'passport',
       'cookie-session',
       'cookie-parser',
-      'objection',
+      'objection'
       'objection-password'], { 'save': true, 'save-exact': true });
   }
 
   end(){
-    console.log(`   ${chalk.yellow('Completion steps:'}}
+    console.log(`   ${chalk.yellow('Completion steps:')}`)
     console.log('')
     console.log('     (1) Create migration for users (with email + password columns)')
     console.log('     (2) Configure cookieSession, cookieParser, passport middleware in `server.js`')
