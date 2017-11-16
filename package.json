@@ -1,0 +1,18 @@
+{
+  "name": "generator-genmod",
+  "version": "1.0.0",
+  "description": "yeoman generator for node, knex, objective, react, passport project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "2.3.0",
+    "yeoman-generator": "2.0.1"
+  },
+  "keywords": [
+    "yeoman-generator"
+  ]
+}
