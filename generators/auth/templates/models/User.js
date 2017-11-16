@@ -54,14 +54,7 @@ class User extends Password(objection.Model) {
   static get relationMappings(){
     const Company = require('./Company')
     return {
-      company: {
-        relation: Model.HasOneRelation,
-        modelClass: Company,
-        join: {
-          from: 'user.id',
-          to: 'company.userId'
-        }
-      }
+    
     }
   }
 }

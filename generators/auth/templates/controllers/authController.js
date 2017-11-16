@@ -17,14 +17,12 @@ exports.handleRegisterRes = function(req, res){
 }
 
 exports.handleLoginRes = (req, res)=>{
-  console.log(req.user)
   res.json(req.user)
 }
 
 exports.handleCurrentAuthRes = (req, res)=>{
-    const user = req.user
-    req.logout()
-    res.status(200).json({loggedOut: true, user})
+    const user = req.user || {}
+    res.status(200).json(user)
 }
 
 exports.handleLogoutRes = (req, res)=>{

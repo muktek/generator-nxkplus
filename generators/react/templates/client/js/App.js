@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
 const DynamicRoute = (props) => {
-  console.log(props)
   const styleObj = {padding: '3rem', fontSize: '6vw', color: '#0E6655'}
   return <h2 style={styleObj}>Dynamic Route: <u>{props.match.params.routeVal}</u></h2>
 }

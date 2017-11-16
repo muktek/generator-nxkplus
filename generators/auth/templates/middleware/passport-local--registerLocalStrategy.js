@@ -19,10 +19,8 @@ async function  localStrategyHandler(inputEmail, inputPassword, doneCb) {
 
     const isValidPassword = await user.verifyPassword(inputPassword)
 
-    console.log('user??', user)
     if(!isValidPassword){ return doneCb(null, false, `incorrect user password`) }
 
-    console.log('user??', user)
     delete user.password
     return doneCb(null, user)
 
