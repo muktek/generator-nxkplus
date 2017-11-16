@@ -30,7 +30,7 @@ module.exports = class extends Generator  {
       'passport',
       'cookie-session',
       'cookie-parser',
-      'objection'
+      'objection',
       'objection-password'], { 'save': true, 'save-exact': true });
   }
 
