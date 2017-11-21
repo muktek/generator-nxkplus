@@ -24,9 +24,7 @@ authRouter
     saveNewUser,
     handleRegisterRes
   )
-  .get('/current', (req, res)=>{
-    res.json(req.user || {})
-  })
+  .get('/current', handleCurrentAuthRes)
   .get('/logout', handleLogoutRes)
 
 

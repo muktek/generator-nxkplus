@@ -12,8 +12,8 @@ module.exports = class extends Generator  {
     this.log('')
     this.log('   ',chalk.bold('yo genmod')+' CLI Options:')
     this.log('')
-    this.log(`      ${chalk.blue('$')} yo genmod:auth`)
-    this.log(`      ${chalk.blue('$')} yo genmod:react`)
+    this.log(`      ${chalk.blue('$')} yo nxkplus:auth`)
+    this.log(`      ${chalk.blue('$')} yo nxkplus:react`)
     this.log(``)
   }
 
