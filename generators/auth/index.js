@@ -83,7 +83,7 @@ module.exports = class extends Generator  {
 
     let timestamp = `${yearStr}${monthStr}${dateStr}${hoursStr}${minStr}${secsStr}`
 
-    const userMigrationSrc = this.templatePath('./middleware/_createUserTable')
+    const userMigrationSrc = this.templatePath('./database/migrations/_createUserTable')
     const userMigrationDest = this.destinationPath(`./src/database/migrations/${timestamp}_createUserTable`)
     this.fs.copy(userMigrationSrc, userMigrationDest)
 
