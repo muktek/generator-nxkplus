@@ -66,6 +66,27 @@ module.exports = class extends Generator  {
     const middlewareDest = this.destinationPath('./src/middleware')
     this.fs.copy(middlewareSrc, middlewareDest)
 
+
+    function dateStrZeroed(num){
+      return num < 10 ? `0${num}` : num
+    }
+
+    let d = new Date()
+    let yearStr = d.getFullYear()
+    let monthStr = dateStrZeroed(d.getMonth()+1)
+    let dateStr = dateStrZeroed(d.getDate())
+    let hoursStr = dateStrZeroed(d.getHours())
+    let minStr = dateStrZeroed(d.getMinutes())
+    let secsStr = dateStrZeroed(d.getSeconds())
+
+    let timestamp = `${yearStr}${monthStr}${dateStr}${hoursStr}${minStr}${secsStr}`
+
+    const userMigrationSrc = this.templatePath('./middleware/_createUserTable')
+    const userMigrationDest = this.destinationPath(`./src/database/migrations/${timestamp}_createUserTable`)
+    this.fs.copy(userMigrationSrc, userMigrationDest)
+
+
+
   }
 
 
