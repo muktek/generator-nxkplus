@@ -52,9 +52,8 @@ class User extends Password(objection.Model) {
   }
 
   static get relationMappings(){
-    const Company = require('./Company')
     return {
-    
+
     }
   }
 }
