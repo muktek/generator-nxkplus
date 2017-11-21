@@ -54,21 +54,6 @@ module.exports = class extends Generator  {
     this.fs.copyTpl(authControllerSrc, authControllerDest)
 
 
-    const authRouterSrc = this.templatePath('./routes/authRouter.js')
-    const authRouterDests = this.destinationPath('./src/routes/authRouter.js')
-    this.fs.copyTpl(authRouterSrc, authRouterDests)
-
-
-    const helpersSrc = this.templatePath('./helpers')
-    const helpersDest = this.destinationPath('./src/helpers')
-    this.fs.copy(helpersSrc, helpersDest)
-
-
-    const middlewareSrc = this.templatePath('./middleware')
-    const middlewareDest = this.destinationPath('./src/middleware')
-    this.fs.copy(middlewareSrc, middlewareDest)
-
-
     function dateStrZeroed(num){
       return num < 10 ? `0${num}` : num
     }
@@ -83,10 +68,26 @@ module.exports = class extends Generator  {
 
     let timestamp = `${yearStr}${monthStr}${dateStr}${hoursStr}${minStr}${secsStr}`
 
-    const userMigrationSrc = this.templatePath('./database/migrations/_createUserTable')
-    const userMigrationDest = this.destinationPath(`./src/database/migrations/${timestamp}_createUserTable`)
-    this.fs.copy(userMigrationSrc, userMigrationDest)
+    const userMigrationSrc = this.templatePath('./database/migrations/_createUserTable.js')
+    const userMigrationDest = this.destinationPath(`./src/database/migrations/${timestamp}_createUserTable.js`)
+    this.fs.copyTpl(userMigrationSrc, userMigrationDest)
 
+
+
+
+    const authRouterSrc = this.templatePath('./routes/authRouter.js')
+    const authRouterDests = this.destinationPath('./src/routes/authRouter.js')
+    this.fs.copyTpl(authRouterSrc, authRouterDests)
+
+
+    const helpersSrc = this.templatePath('./helpers')
+    const helpersDest = this.destinationPath('./src/helpers')
+    this.fs.copy(helpersSrc, helpersDest)
+
+
+    const middlewareSrc = this.templatePath('./middleware')
+    const middlewareDest = this.destinationPath('./src/middleware')
+    this.fs.copy(middlewareSrc, middlewareDest)
 
 
   }
