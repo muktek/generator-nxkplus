@@ -32,11 +32,13 @@ module.exports = class extends Generator  {
   }
 
   end(){
+    console.log('')
     console.log(`   ${chalk.yellow('Completion steps:')}`)
     console.log('')
-    console.log('     (1) Create migration for users (with email + password columns)')
-    console.log('     (2) Configure cookieSession, cookieParser, passport middleware in `server.js`')
-    console.log
+    console.log('     (1) Import  cookieSession, cookieParser, passport middleware, authRouter in server.js')
+    console.log('     (2) Configure cookieParser, cookieSession AFTER bodyParser in `server.js`')
+    console.log('     (3) Configure passport middleware AFTER cookieParser in `server.js`')
+    console.log('     (4) Add `authRouter` to express middleware  AFTER passport config in `server.js`')
     console.log('')
 
   }
