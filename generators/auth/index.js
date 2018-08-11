@@ -28,7 +28,9 @@ module.exports = class extends Generator  {
       'cookie-session',
       'cookie-parser',
       'objection',
-      'objection-password'], { 'save': true, 'save-exact': true });
+      'knex',
+      'express'
+      'bcryptjs'], { 'save': true, 'save-exact': true });
   }
 
   end(){
